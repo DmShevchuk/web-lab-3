@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web-lab-3-maven">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_lab_3_maven</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web-lab-3-maven" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

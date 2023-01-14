@@ -1,0 +1,54 @@
+body {
+  font-size: medium;
+  color: white;
+  font-family: Candara, emoji;
+  cursor: pointer;
+  margin: 1% 15% 5% 15%;
+  position: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.base-image {
+  position: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.meme {
+  width: 30%;
+  height: 30%;
+}
+
+a {
+  background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  margin: 25px;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #ce0606;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #17D4FE;
+  font-size: 60px;
+  font-family: Orbitron, serif;
+  letter-spacing: 7px;
+}

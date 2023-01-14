@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<f:view>
+    <h:head>
+        <title>Лабораторная работа №3</title>
+        <h:outputStylesheet library="css" name="index.scss"/>
+        <h:outputStylesheet library="css" name="collapse-sections-style.css"/>
+        <h:outputStylesheet library="css" name="background-animation.css"/>
+    </h:head>
+    <h:body styleClass="background-style">
+        <div class="base-image">
+            <img class="varik" src="resources/img/img.png" alt="varik"/>
+        </div>
+        <div id="description">
+            <div class="desc-text" style="margin-top: 20px; margin-bottom: 20px; color: black;">
+                Разработать приложение на базе JavaServer Faces Framework, которое осуществляет проверку попадания точки
+                в заданную область на координатной плоскости.
+                Приложение должно включать в себя 2 facelets-шаблона - стартовую страницу и основную
+                приложения, а также набор управляемых бинов (managed beans), реализующих логику на стороне сервера.
+            </div>
+        </div>
+        <button type="button" class="collapsible">Стартовая страница должна содержать следующие элементы:</button>
+        <div class="content">
+            <ul>
+                <li>"Шапку", содержащую ФИО студента, номер группы и номер варианта.</li>
+                <li>Интерактивные часы, показывающие текущие дату и время, обновляющиеся раз в 12 секунд.</li>
+                <li>Ссылку, позволяющую перейти на основную страницу приложения.</li>
+            </ul>
+        </div>
+
+        <button type="button" class="collapsible">Основная страница приложения должна содержать следующие элементы:
+        </button>
+        <div class="content">
+            <ul>
+                <li>Набор компонентов для задания координат точки и радиуса области в соответствии с вариантом задания.
+                    Может потребоваться использование дополнительных библиотек компонентов - ICEfaces (префикс "ace")
+                    и PrimeFaces (префикс "p"). Если компонент допускает ввод заведомо некорректных данных
+                    (таких, например, как буквы в координатах точки или отрицательный радиус),
+                    то приложение должно осуществлять их валидацию.
+                </li>
+
+                <li>Динамически обновляемую картинку, изображающую область на координатной плоскости
+                    в соответствии с номером варианта и точки, координаты которых были заданы пользователем.
+                    Клик по картинке должен инициировать сценарий, осуществляющий определение координат новой точки
+                    и отправку их на сервер для проверки её попадания в область. Цвет точек должен зависить
+                    от факта попадания / непопадания в область.
+                    Смена радиуса также должна инициировать перерисовку картинки.
+                </li>
+
+                <li>Таблицу со списком результатов предыдущих проверок.</li>
+
+                <li>Ссылку, позволяющую вернуться на стартовую страницу.</li>
+            </ul>
+        </div>
+
+        <button type="button" class="collapsible">Дополнительные требования к приложению:</button>
+        <div class="content">
+            <ul>
+                <li>Все результаты проверки должны сохраняться в базе данных под управлением СУБД Oracle.</li>
+                <li>Для доступа к БД необходимо использовать JPA с ORM-провайдером на усмотрение студента.</li>
+                <li>Для управления списком результатов должен использоваться Session-scoped Managed Bean.</li>
+                <li>Конфигурация управляемых бинов должна быть задана с помощью параметров в конфигурационном файле.</li>
+                <li>Правила навигации между страницами приложения должны быть заданы в отдельном конфигурационном файле.</li>
+            </ul>
+        </div>
+
+        <div class="link" style="margin-top: 20px;">
+            <h:link id="mainLink"
+                    styleClass="link"
+                    outcome="goConnector">
+                На связующую страницу
+            </h:link>
+        </div>
+        <h:outputScript library="js" name="collapse-sections.js"/>
+
+    </h:body>
+</f:view>
+</html>

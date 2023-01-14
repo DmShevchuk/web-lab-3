@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:head>
+        <h:outputStylesheet library="css" name="conn.scss"/>
+        <h:outputStylesheet library="css" name="background-animation.css"/>
+    </h:head>
+    <h:body styleClass="background-style">
+        <div class="base-image">
+            <img class="varik" src="resources/img/meme.png" alt="meme"/>
+        </div>
+        <div class="header">
+            <div class="header-block">
+                <h:outputLabel styleClass="name1">Шевчук Дмитрий</h:outputLabel>
+                <h:outputLabel styleClass="name2"> Вариант 66639</h:outputLabel>
+            </div>
+        </div>
+        <div class="time" style="font-size: 40px;">
+            <h3 id="clock">Clock</h3>
+        </div>
+        <div class="link">
+            <h:link id="backLink"
+                    styleClass="link"
+                    outcome="goStart">
+                На стартовую
+            </h:link>
+            <h:link id="mainLink"
+                    styleClass="link"
+                    outcome="goMain">
+                К приложению
+            </h:link>
+        </div>
+        <h:outputScript library="js" name="clock.js" target="body"/>
+    </h:body>
+</f:view>
+</html>

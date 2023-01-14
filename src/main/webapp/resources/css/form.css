@@ -1,0 +1,33 @@
+.form {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: cadetblue;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    margin-left: 40px;
+}
+
+.label-for-values {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 20px !important;
+}
+
+.form-submits {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.form-buttons{
+    color: cornflowerblue;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.radio-button {
+    width: 10px;
+    height: 20px;
+}

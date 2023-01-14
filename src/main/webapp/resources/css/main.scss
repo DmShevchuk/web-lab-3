@@ -1,0 +1,50 @@
+.bordered {
+  margin: 15px;
+}
+
+.select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: auto;
+  height: auto;
+}
+
+table td, th {
+  color: white;
+  border-bottom: white;
+  border: 1px;
+}
+
+table {
+  padding-top: 5%;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 5%;
+  border: 1px solid #4CAF50;
+  border-top: none;
+  border-radius: 5%;
+  background: linear-gradient(-45deg,
+          rgba(35, 166, 213, 0.5),
+          rgba(35, 213, 171, 0.46),
+          rgba(238, 119, 82, 0.55),
+          rgba(231, 60, 126, 0.42));
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
